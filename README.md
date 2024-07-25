@@ -107,5 +107,27 @@ console.log(missingNumber); // Output: The missing number
 ```
 ---
 
+###### 4. How do you find the duplicate number on a given integer array?
+
+```javascript
+function duplicateNumber(arr){
+    let unique = []
+    let duplicate = []
+    for (const iterator of arr) {
+        if(!unique.includes(iterator)){
+            unique.push(iterator)
+        }else{
+            duplicate.push(iterator)
+        }
+    }
+    return duplicate
+    
+}
+
+let arr =[1, 1, 2, 2, 3, 4, 5]
+console.log(duplicateNumber(arr)) // [ 1, 2 ]
+```
+---
+
 
 
