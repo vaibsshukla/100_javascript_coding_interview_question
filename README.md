@@ -129,5 +129,29 @@ console.log(duplicateNumber(arr)) // [ 1, 2 ]
 ```
 ---
 
+###### 5. How do you find the duplicate number on a given integer array?
+
+
+```javascript
+function findMaxMin(arr){
+    let max = arr[0]
+    let min = arr[0]
+    for (const iterator of arr) {
+       if(max <iterator){
+        max = iterator
+       }
+       if(min > iterator){
+        min = iterator
+       }
+        
+    }
+    return {max, min}
+}
+
+let arr =[6,2,7,9,1,8]
+console.log(findMaxMin(arr))  // { max: 9, min: 1 }
+```
+---
+
 
 
