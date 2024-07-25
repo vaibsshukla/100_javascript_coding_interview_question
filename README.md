@@ -66,4 +66,10 @@ console.log(result); // Output: 4 (index of target 0 in the rotated array)
 ```
 ---
 
+###### 3. How do you find the missing number in a given integer array of 1 to 100?
+
+$$
+\Sum = n(n+1)/2,.
+$$
+
 
