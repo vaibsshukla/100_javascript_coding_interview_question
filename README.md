@@ -77,11 +77,9 @@ $$
 $$
 
 $$
-For n=100;
+n=100;
 $$
-
 Expected 
-
 $$
   sum =  \begin{pmatrix}
     (100)(100+1)\\
