@@ -23,6 +23,7 @@ const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
 const uniqueArray = removeDuplicates(arrayWithDuplicates);
 console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
 ```
+---
 ###### 2. How do you search for a target value in a rotated array?
 
 ```javascript
@@ -63,5 +64,6 @@ const result = searchRotatedArray(rotatedArray, target);
 console.log(result); // Output: 4 (index of target 0 in the rotated array)
 
 ```
+---
 
 
