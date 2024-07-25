@@ -69,7 +69,40 @@ console.log(result); // Output: 4 (index of target 0 in the rotated array)
 ###### 3. How do you find the missing number in a given integer array of 1 to 100?
 
 $$
-\Sum = n(n+1)/2,.
+ sum =  \begin{pmatrix}
+    (n)(n+1)\\
+  \hline
+   2
+  \end{pmatrix}
 $$
+$$
+For n=100;
+$$
+Expected 
+$$
+  sum =  \begin{pmatrix}
+    (100)(100+1)\\
+  \hline
+   2
+  \end{pmatrix}=5050
+$$
+
+```javascript
+function findMissingNumber(arr) {
+  const n = 100;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((acc, num) => acc + num, 0);
+  
+  return expectedSum - actualSum;
+}
+
+// Example usage:
+const arrayWithMissingNumber = [1, 2, 3, /* ..., */ 99, 100]; // Example array with a missing number
+const missingNumber = findMissingNumber(arrayWithMissingNumber);
+console.log(missingNumber); // Output: The missing number
+
+```
+---
+
 
 
