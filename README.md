@@ -153,5 +153,30 @@ console.log(findMaxMin(arr))  // { max: 9, min: 1 }
 ```
 ---
 
+###### 6. How do you find all pairs of an integer array whose sum is equal to a given number?
+
+
+```javascript
+function findPair(arr, tar){
+let temp = []
+
+for (let i = 0; i < arr.length; i++) {
+    const first = arr[i];
+    for (let j = i+1; j < arr.length; j++) {
+        const second = arr[j];
+        if(first+second == tar){
+            temp.push({first,second})
+        }
+    }   
+}
+    return temp
+}
+
+let arr =[6,2,7,9,1,8,]
+console.log(findPair(arr, 9)) // [ { first: 2, second: 7 }, { first: 1, second: 8 } ]
+```
+---
+
+
 
 
