@@ -75,10 +75,13 @@ $$
    2
   \end{pmatrix}
 $$
+
 $$
 For n=100;
 $$
+
 Expected 
+
 $$
   sum =  \begin{pmatrix}
     (100)(100+1)\\
