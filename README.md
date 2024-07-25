@@ -129,7 +129,7 @@ console.log(duplicateNumber(arr)) // [ 1, 2 ]
 ```
 ---
 
-###### 5. How do you find the duplicate number on a given integer array?
+###### 5. How do you find the largest and smallest number in an unsorted integer array?
 
 
 ```javascript
