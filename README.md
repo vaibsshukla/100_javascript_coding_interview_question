@@ -177,6 +177,25 @@ console.log(findPair(arr, 9)) // [ { first: 2, second: 7 }, { first: 1, second: 
 ```
 ---
 
+###### 7. How do you remove duplicates from an array in place?
+
+```javascript
+function removeDuplicate(arr){
+    let unique = []
+    let sortedArr = arr.sort((a,b)=>a-b)
+    for (let index = 0; index < sortedArr.length; index++) {
+        if(!unique.includes(sortedArr[index])){
+unique.push(sortedArr[index])
+        }
+    }
+    return unique
+}
+let arr = [9,1, 1, 2, 2, 3, 4, 5]
+
+let uniqueEle = removeDuplicate(arr)
+console.log(uniqueEle)
+```
+---
 
 
 
