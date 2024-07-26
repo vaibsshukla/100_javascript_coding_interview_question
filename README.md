@@ -193,9 +193,13 @@ unique.push(sortedArr[index])
 let arr = [9,1, 1, 2, 2, 3, 4, 5]
 
 let uniqueEle = removeDuplicate(arr)
-console.log(uniqueEle)
+console.log(uniqueEle) // [ 1, 2, 3, 4, 5, 9 ]
 ```
 ---
+###### 8. How to rotate an array left and right by a given number K?
+
+
+
 
 
 
