@@ -198,8 +198,28 @@ console.log(uniqueEle) // [ 1, 2, 3, 4, 5, 9 ]
 ---
 ###### 8. How to rotate an array left and right by a given number K?
 
+```javascript
+function rotateLeft(arr, noOfItems){
+    let n = arr.length
+    if(n>=noOfItems){
+    return [...arr.slice(noOfItems),...arr.slice(0,noOfItems)]
+    }
+}
 
+function rotateRight(arr, noOfItems){
+    return [...arr.slice(arr.length-2),...arr.slice(0,arr.length-noOfItems)]
 
+}
 
+let arr = [1,2,3,4,5,6,7,8]
+
+let leftRotatedArr = rotateLeft(arr,2)
+console.log(leftRotatedArr) //[ 3, 4, 5, 6, 7, 8, 1, 2 ]
+
+let arr1 = [1,2,3,4,5,6,7,8]
+
+console.log(rotateRight(arr1,2)) // [ 7, 8, 1, 2, 3, 4, 5, 6 ]
+```
+---
 
 
