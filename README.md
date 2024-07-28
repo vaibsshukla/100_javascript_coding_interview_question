@@ -222,4 +222,27 @@ console.log(rotateRight(arr1,2)) // [ 7, 8, 1, 2, 3, 4, 5, 6 ]
 ```
 ---
 
+###### 9. How do you find duplicates from an unsorted array?
+
+```javascript
+function findDuplicates(arr) {
+    let seen = new Set();
+    let duplicates = new Set();
+
+    for (let num of arr) {
+        if (seen.has(num)) {
+            duplicates.add(num);
+        } else {
+            seen.add(num);
+        }
+    }
+
+    return Array.from(duplicates);
+}
+
+let arr = [1, 2, 3, 1, 2, 3, 4, 5, 3, 6];
+console.log(findDuplicates(arr)); // Output: [1, 2, 3]
+```
+---
+
 
