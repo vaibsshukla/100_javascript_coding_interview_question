@@ -283,4 +283,41 @@ console.log(str)  // 'Start Index 3  End 10'
 ```
 ---
 
+###### 11. Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+```javascript
+function longestConsecutive(nums) {
+    if (nums.length === 0) return 0;
+    
+    const numSet = new Set(nums);
+    let maxLength = 0;
+    
+    for (const num of numSet) {
+        // Check if it's the start of a sequence
+        if (!numSet.has(num - 1)) {
+            console.log(num)
+
+            let currentNum = num;
+            let currentStreak = 1;
+            
+            // Count the length of the sequence
+            while (numSet.has(currentNum + 1)) {
+                currentNum++;
+                currentStreak++;
+            }
+            
+            // Update the max length
+            maxLength = Math.max(maxLength, currentStreak);
+        }
+    }
+    
+    return maxLength;
+}
+
+const nums = [100, 4, 200, 1, 3, 2];
+console.log(longestConsecutive(nums)); // Output: 4 (sequence is [1, 2, 3, 4])
+
+```
+---
+
 
