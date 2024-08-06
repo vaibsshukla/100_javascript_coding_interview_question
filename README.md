@@ -245,4 +245,42 @@ console.log(findDuplicates(arr)); // Output: [1, 2, 3]
 ```
 ---
 
+###### 10. Given an array of integers sorted in ascending order, find the starting and ending position of a given value.
+
+```javascript
+function findIndex(arr,tar){
+    let tempArr = [...arr]
+   let start;
+   let end;
+   for (let index = 0; index < tempArr.length; index++) {
+    if(tempArr[index] == tar){
+    start = index
+    break;}
+   }
+
+   for (let index = tempArr.length-1; index > 0; index--) {
+    if(tempArr[index] == tar){
+     end = index
+     break;
+    }
+   }
+   console.log(start)
+   console.log(end)
+
+   if(start == end){
+    return ("Only One key present"+start)
+   }else{
+   return ("Start Index "+start+ " "+ " End "+ end)
+   }
+  
+}
+
+let arr = [ 1, 2, 7, 8, 8, 9, 8, 0, 0, 0, 8 ];
+let str= findIndex(arr,8)
+console.log(str)  // 'Start Index 3  End 10'
+
+
+```
+---
+
 
