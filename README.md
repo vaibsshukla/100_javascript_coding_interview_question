@@ -349,7 +349,7 @@ console.log(maxSubArray(nums)); // Output: 6
 ```
 ---
 
-###### 12. How do you reverse an array in place in Javascript?
+###### 13. How do you reverse an array in place in Javascript?
 
 **`// ->`** Approach:
 
@@ -385,6 +385,30 @@ function reverseArray(arr) {
 let array = [1, 2, 3, 4, 5];
 console.log(reverseArray(array)); // Output: [5, 4, 3, 2, 1]
 
+```
+---
+
+###### 13. How are duplicates removed from an array without using any library?
+
+```javascript
+function removeDuplicates(arr) {
+    let uniqueArray = [];
+    let seen = new Map(); // Map to track seen values
+
+    for (let i = 0; i < arr.length; i++) {
+        let item = arr[i];
+        if (!seen.has(item)) {
+            uniqueArray.push(item);
+            seen.set(item, true); // Mark item as seen
+        }
+    }
+
+    return uniqueArray;
+}
+
+// Example usage:
+let array = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicates(array)); // Output: [1, 2, 3, 4, 5]
 ```
 ---
 
