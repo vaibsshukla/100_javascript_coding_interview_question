@@ -388,7 +388,7 @@ console.log(reverseArray(array)); // Output: [5, 4, 3, 2, 1]
 ```
 ---
 
-###### 13. How are duplicates removed from an array without using any library?
+###### 14. How are duplicates removed from an array without using any library?
 
 ```javascript
 function removeDuplicates(arr) {
