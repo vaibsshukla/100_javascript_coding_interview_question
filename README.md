@@ -320,16 +320,16 @@ console.log(longestConsecutive(nums)); // Output: 4 (sequence is [1, 2, 3, 4])
 ```
 ---
 
-###### 11. Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+###### 12. Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 This problem is a classic example of Kadane's Algorithm, which efficiently solves the "Maximum Subarray" problem. Here's a breakdown of the approach:
 
-Approach:
+**`// ->`** Approach:
 
-Initialize two variables:
-current_sum: Tracks the sum of the current subarray.
-max_sum: Tracks the maximum sum encountered so far.
-Traverse the array and for each element, decide whether to include it in the current subarray or start a new subarray from that element.
-Update the max_sum whenever a larger sum is found.
+1. Initialize two variables:
+2. current_sum: Tracks the sum of the current subarray.
+3. max_sum: Tracks the maximum sum encountered so far.
+4. Traverse the array and for each element, decide whether to include it in the current subarray or start a new subarray from that element.
+5. Update the max_sum whenever a larger sum is found.
 
 ```javascript
 function maxSubArray(nums) {
@@ -348,6 +348,43 @@ console.log(maxSubArray(nums)); // Output: 6
 
 ```
 ---
+
+###### 12. How do you reverse an array in place in Javascript?
+
+**`// ->`** Approach:
+Initialization: left starts at index 0 and right starts at the last index of the array.
+Swapping: The values at the left and right indices are swapped using a temporary variable temp.
+Pointers Update: After each swap, left is incremented and right is decremented to move towards the center of the array.
+Termination: The loop terminates when left is no longer less than right, meaning all necessary swaps have been made.
+
+
+```javascript
+function reverseArray(arr) {
+    let left = 0;            // Pointer starting at the beginning
+    let right = arr.length - 1; // Pointer starting at the end
+
+    while (left < right) {
+        // Swap the elements at the left and right pointers
+        let temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        // Move pointers towards each other
+        left++;
+        right--;
+    }
+
+    return arr; // The array is now reversed in place
+}
+
+// Example usage:
+let array = [1, 2, 3, 4, 5];
+console.log(reverseArray(array)); // Output: [5, 4, 3, 2, 1]
+
+```
+---
+
+
 
 
 
