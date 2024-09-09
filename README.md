@@ -324,6 +324,7 @@ console.log(longestConsecutive(nums)); // Output: 4 (sequence is [1, 2, 3, 4])
 This problem is a classic example of Kadane's Algorithm, which efficiently solves the "Maximum Subarray" problem. Here's a breakdown of the approach:
 
 Approach:
+
 Initialize two variables:
 current_sum: Tracks the sum of the current subarray.
 max_sum: Tracks the maximum sum encountered so far.
