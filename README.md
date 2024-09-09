@@ -352,9 +352,13 @@ console.log(maxSubArray(nums)); // Output: 6
 ###### 12. How do you reverse an array in place in Javascript?
 
 **`// ->`** Approach:
+
 Initialization: left starts at index 0 and right starts at the last index of the array.
+
 Swapping: The values at the left and right indices are swapped using a temporary variable temp.
+
 Pointers Update: After each swap, left is incremented and right is decremented to move towards the center of the array.
+
 Termination: The loop terminates when left is no longer less than right, meaning all necessary swaps have been made.
 
 
