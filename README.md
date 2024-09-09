@@ -321,6 +321,14 @@ console.log(longestConsecutive(nums)); // Output: 4 (sequence is [1, 2, 3, 4])
 ---
 
 ###### 11. Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+This problem is a classic example of Kadane's Algorithm, which efficiently solves the "Maximum Subarray" problem. Here's a breakdown of the approach:
+
+Approach:
+Initialize two variables:
+current_sum: Tracks the sum of the current subarray.
+max_sum: Tracks the maximum sum encountered so far.
+Traverse the array and for each element, decide whether to include it in the current subarray or start a new subarray from that element.
+Update the max_sum whenever a larger sum is found.
 
 ```javascript
 function maxSubArray(nums) {
