@@ -429,6 +429,36 @@ console.log(decodedString); // Output: "Hello"
 ```
 ---
 
+###### 16. How do you perform a binary search in a given array?
+
+
+```javascript
+function binarySearch(arr, target) {
+    let low = 0;
+    let high = arr.length - 1;
+
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+
+        if (arr[mid] === target) {
+            return mid; // Target found at index mid
+        } else if (arr[mid] < target) {
+            low = mid + 1; // Search in the right half
+        } else {
+            high = mid - 1; // Search in the left half
+        }
+    }
+
+    return -1; // Target not found
+}
+
+// Example usage:
+let sortedArray = [1, 3, 5, 7, 9, 11];
+let target = 7;
+console.log(binarySearch(sortedArray, target)); // Output: 3 (index of 7)
+```
+---
+
 
 
 
