@@ -412,6 +412,24 @@ console.log(removeDuplicates(array)); // Output: [1, 2, 3, 4, 5]
 ```
 ---
 
+###### 15. How to convert a byte array to a String?
+
+
+```javascript
+// Create a byte array (Uint8Array)
+const byteArray = new Uint8Array([72, 101, 108, 108, 111]); // Represents the string "Hello"
+
+// Create a TextDecoder instance
+const decoder = new TextDecoder('utf-8'); // Specify the encoding (utf-8 is the default)
+
+// Decode the byte array into a string
+const decodedString = decoder.decode(byteArray);
+
+console.log(decodedString); // Output: "Hello"
+```
+---
+
+
 
 
 
