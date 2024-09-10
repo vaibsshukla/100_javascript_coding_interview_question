@@ -6,6 +6,9 @@
 > [!NOTE]  
 > This repo was created in 2024 and the questions provided here are therefore based on the JavaScript syntax and behavior at that time. Since JavaScript is a constantly evolving language, there are newer language features that are not covered by the questions here.
 
+# Table of Contents
+- [👀 How do remove duplicates from a given array?](#How do remove duplicates from a given array?)
+
 ---
 
 ### Coding interview questions for arrays
