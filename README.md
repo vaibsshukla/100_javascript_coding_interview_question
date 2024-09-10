@@ -7,7 +7,7 @@
 > This repo was created in 2024 and the questions provided here are therefore based on the JavaScript syntax and behavior at that time. Since JavaScript is a constantly evolving language, there are newer language features that are not covered by the questions here.
 
 # Table of Contents
-- [Coding inter questions for arrays](#Coding-interview-questions-for-arrays)
+- [Coding interview questions for arrays](#Coding-interview-questions-for-arrays)
    - [How to remove duplicates from a given array?](##How-to-remove-duplicates-from-a-given-array?)
    - [How do you search for a target value in a rotated array?](######How-do-you-search-for-a-target-value-in-a-rotated-array?)
 
