@@ -8,6 +8,7 @@
 
 # Table of Contents
 - [Coding inter questions for arrays](#Coding-interview-questions-for-arrays)
+   - [How do remove duplicates from a given array?](#How-do-remove-duplicates-from-a-given-array?)
 
 ---
 
