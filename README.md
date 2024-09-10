@@ -16,7 +16,10 @@
 ### Coding interview questions for arrays
 
 ---
+
+---
 ## 1. How do remove duplicates from a given array?
+---
 
 ```javascript
 function removeDuplicates(arr) {
