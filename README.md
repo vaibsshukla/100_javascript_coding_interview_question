@@ -18,7 +18,7 @@
 ---
 
 ---
-## 1. How do remove duplicates from a given array?
+### 1. How do remove duplicates from a given array?
 ---
 
 ```javascript
