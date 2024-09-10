@@ -8,8 +8,8 @@
 
 # Table of Contents
 - [Coding inter questions for arrays](#Coding-interview-questions-for-arrays)
-   - [How to remove duplicates from a given array?](#How-to-remove-duplicates-from-a-given-array?)
-   - [How do you search for a target value in a rotated array?](#How-do-)
+   - [How to remove duplicates from a given array?](##How-to-remove-duplicates-from-a-given-array?)
+   - [How do you search for a target value in a rotated array?](######How-do-you-search-for-a-target-value-in-a-rotated-array?)
 
 ---
 
