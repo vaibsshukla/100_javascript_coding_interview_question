@@ -10,6 +10,11 @@
 - [Coding interview questions for arrays](#Coding-interview-questions-for-arrays)
     - [How to remove duplicates from a given array?](#1-how-do-remove-duplicates-from-a-given-array)
     - [How do you search for a target value in a rotated array?](#2-how-do-you-search-for-a-target-value-in-a-rotated-array)
+    - [How do you find the missing number in a given integer array of 1 to 100?](#3-how-do-you-find-the-missing-number-in-a-given-integer-array-of-1-to-100)
+    - [How do you find the duplicate number on a given integer array?](#4-how-do-you-find-the-duplicate-number-on-a-given-integer-array)
+    - [How do you find the largest and smallest number in an unsorted integer array?](#5-how-do-you-find-the-largest-and-smallest-number)
+    - [How do you find all pairs of an integer array whose sum is equal to a given number?](#6-how-do-you-find-all-pairs-of-an-integer-array-whose-sum-is-equal-to-a-given-number)
+    - 
 
 ---
 
