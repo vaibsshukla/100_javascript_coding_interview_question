@@ -18,6 +18,77 @@
 
 ---
 
+### Coding interview questions for String
+
+---
+
+### 1. How do you reverse a given string in place?
+
+```js
+function reverseString(str) {
+  // Convert the string into an array
+  let arr = str.split('');
+  
+  // Use two-pointer technique to reverse the array in place
+  let left = 0;
+  let right = arr.length - 1;
+  
+  while (left < right) {
+    // Swap the characters
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+    
+    // Move the pointers
+    left++;
+    right--;
+  }
+  
+  // Convert the array back into a string
+  return arr.join('');
+}
+
+// Example usage
+console.log(reverseString("hello")); // "olleh"
+
+```
+---
+
+### 2. How do you print duplicate characters from a string?
+
+```js
+function printDuplicateCharacters(str) {
+  // Create a map to store character frequencies
+  let charCount = new Map();
+
+  // Convert the string to lowercase (optional, if case-insensitive comparison is needed)
+  str = str.toLowerCase();
+
+  // Count the frequency of each character
+  for (let char of str) {
+    if (charCount.has(char)) {
+      charCount.set(char, charCount.get(char) + 1);
+    } else {
+      charCount.set(char, 1);
+    }
+  }
+
+  // Print characters with a frequency greater than 1
+  console.log("Duplicate characters:");
+  for (let [char, count] of charCount) {
+    if (count > 1) {
+      console.log(char);
+    }
+  }
+}
+
+// Example usage
+printDuplicateCharacters("Programming"); // Output: "r", "g", "m"
+
+```
+
+
+
+---
+
 ### Coding interview questions for arrays
 
 ---
