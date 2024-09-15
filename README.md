@@ -399,6 +399,101 @@ console.log(reverseWords("The quick brown fox jumps over the lazy dog"));
 
 ```
 
+### 13. How do you check if two strings are a rotation of each other?
+
+```js
+function areRotations(str1, str2) {
+  // Check if lengths are equal; if not, they cannot be rotations
+  if (str1.length !== str2.length) {
+    return false;
+  }
+
+  // Concatenate str1 with itself
+  let concatenated = str1 + str1;
+
+  // Check if str2 is a substring of the concatenated string
+  return concatenated.includes(str2);
+}
+
+// Example usage
+console.log(areRotations("abcd", "dabc")); // Output: true
+console.log(areRotations("abcd", "abdc")); // Output: false
+
+```
+---
+
+### 14. How do you check if a given string is a palindrome?
+
+```js
+function isPalindrome(str) {
+  let left = 0;
+  let right = str.length - 1;
+
+  while (left < right) {
+    // Skip non-alphanumeric characters
+    if (!isAlphanumeric(str[left])) {
+      left++;
+    } else if (!isAlphanumeric(str[right])) {
+      right--;
+    } else if (str[left].toLowerCase() !== str[right].toLowerCase()) {
+      return false;
+    } else {
+      left++;
+      right--;
+    }
+  }
+
+  return true;
+}
+
+// Helper function to check if a character is alphanumeric
+function isAlphanumeric(char) {
+  return /^[a-z0-9]$/i.test(char);
+}
+
+// Example usage
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+
+```
+
+### 15. How to find the length of the longest substring without repeating characters?
+
+```js
+function lengthOfLongestSubstring(s) {
+  let charSet = new Set(); // Set to store characters in the current window
+  let left = 0;            // Left pointer of the sliding window
+  let maxLength = 0;       // Variable to keep track of the maximum length
+
+  for (let right = 0; right < s.length; right++) {
+    // If the character is already in the set, remove characters from the left
+    while (charSet.has(s[right])) {
+      charSet.delete(s[left]);
+      left++;
+    }
+
+    // Add the new character to the set
+    charSet.add(s[right]);
+
+    // Update the maximum length
+    maxLength = Math.max(maxLength, right - left + 1);
+  }
+
+  return maxLength;
+}
+
+// Example usage
+console.log(lengthOfLongestSubstring("abcabcbb")); // Output: 3 ("abc")
+console.log(lengthOfLongestSubstring("bbbbb"));    // Output: 1 ("b")
+console.log(lengthOfLongestSubstring("pwwkew"));   // Output: 3 ("wke")
+
+```
+
+---
+
+
+
+
 
 ---
 
