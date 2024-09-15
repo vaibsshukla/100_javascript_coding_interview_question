@@ -84,7 +84,320 @@ function printDuplicateCharacters(str) {
 printDuplicateCharacters("Programming"); // Output: "r", "g", "m"
 
 ```
+---
 
+### 3. How do you print duplicate characters from a string?
+
+```js
+function sortString(str) {
+  // Convert the string to an array for sorting
+  let arr = str.split('');
+  let n = arr.length;
+  
+  // Bubble sort algorithm
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // Swap adjacent elements if they are in the wrong order
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+  // Convert the sorted array back to a string
+  return arr.join('');
+}
+
+// Example usage
+console.log(sortString("dcba")); // Output: "abcd"
+
+```
+---
+
+### 4. How do you find all the permutations of a string?
+
+```js
+
+function permuteString(str) {
+  let result = [];
+
+  // Helper function for backtracking
+  function permute(arr, left, right) {
+    if (left === right) {
+      // If we reached the end, push the current permutation into the result
+      result.push(arr.join(''));
+    } else {
+      for (let i = left; i <= right; i++) {
+        // Swap characters at index `left` and `i`
+        [arr[left], arr[i]] = [arr[i], arr[left]];
+        
+        // Recur for the next level
+        permute(arr, left + 1, right);
+
+        // Backtrack by swapping the characters back to their original positions
+        [arr[left], arr[i]] = [arr[i], arr[left]];
+      }
+    }
+  }
+
+  // Convert the string to an array for easier manipulation
+  permute(str.split(''), 0, str.length - 1);
+
+  return result;
+}
+
+// Example usage
+let permutations = permuteString("abc");
+console.log(permutations); 
+// Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+
+```
+---
+
+### 5. How can a given string be reversed using recursion?
+
+```js
+function reverseStringRecursively(str) {
+  // Base case: if the string is empty or has only one character
+  if (str.length === 0) {
+    return str;
+  }
+
+  // Recursive case: reverse the rest of the string and append the first character to the end
+  return reverseStringRecursively(str.substring(1)) + str[0];
+}
+
+// Example usage
+console.log(reverseStringRecursively("hello")); // Output: "olleh"
+
+```
+
+### 6. How do you check if a string contains only digits?
+
+```js
+function containsOnlyDigits(str) {
+  return str.split('').every(char => char >= '0' && char <= '9');
+}
+
+// Example usage
+console.log(containsOnlyDigits("12345")); // true
+console.log(containsOnlyDigits("123a5")); // false
+
+```
+### 7. How do you find duplicate characters in a given string?
+
+```js
+function findDuplicateCharacters(str) {
+  let charCount = {};  // Object to store character frequencies
+  let duplicates = []; // Array to store duplicate characters
+
+  // First pass: count the frequency of each character
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // Second pass: find characters with count greater than 1
+  for (let char in charCount) {
+    if (charCount[char] > 1) {
+      duplicates.push(char);
+    }
+  }
+
+  return duplicates;
+}
+
+// Example usage
+console.log(findDuplicateCharacters("programming")); // Output: ['r', 'g', 'm']
+console.log(findDuplicateCharacters("hello"));        // Output: ['l']
+
+```
+---
+
+### 8. How do you count the number of vowels and consonants in a given string?
+
+```js
+function countVowelsAndConsonants(str) {
+  // Define a set of vowels for easy lookup
+  const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+  
+  let vowelCount = 0;
+  let consonantCount = 0;
+
+  // Loop through each character in the string
+  for (let char of str) {
+    // Check if the character is a letter
+    if (char.match(/[a-zA-Z]/)) {
+      // If it's a vowel, increment vowelCount
+      if (vowels.has(char)) {
+        vowelCount++;
+      } 
+      // Otherwise, it's a consonant
+      else {
+        consonantCount++;
+      }
+    }
+  }
+
+  return { vowelCount, consonantCount };
+}
+
+// Example usage
+const result = countVowelsAndConsonants("Hello World!");
+console.log(`Vowels: ${result.vowelCount}, Consonants: ${result.consonantCount}`);
+// Output: Vowels: 3, Consonants: 7
+
+```
+---
+
+### 9. How do you count the occurrence of a given character in a string?
+
+```js
+function countCharacterOccurrence(str, charToCount) {
+  let count = 0;
+
+  // Loop through each character in the string
+  for (let char of str) {
+    if (char === charToCount) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+// Example usage
+const str = "hello world";
+const char = "l";
+const result = countCharacterOccurrence(str, char);
+console.log(`The character '${char}' occurs ${result} times in the string.`);
+// Output: The character 'l' occurs 3 times in the string.
+
+```
+---
+
+### 10. How do you print the first non-repeated character from a string?
+
+
+```js
+function findFirstNonRepeatedCharacter(str) {
+  // Create a map to store character frequencies
+  let charCount = new Map();
+
+  // First pass: Count the frequency of each character
+  for (let char of str) {
+    charCount.set(char, (charCount.get(char) || 0) + 1);
+  }
+
+  // Second pass: Find the first character with a frequency of 1
+  for (let char of str) {
+    if (charCount.get(char) === 1) {
+      return char;
+    }
+  }
+
+  // Return null if no non-repeated character is found
+  return null;
+}
+
+// Example usage
+console.log(findFirstNonRepeatedCharacter("swiss")); // Output: 'w'
+console.log(findFirstNonRepeatedCharacter("hello")); // Output: 'h'
+console.log(findFirstNonRepeatedCharacter("aabbcc")); // Output: null
+
+```
+
+---
+
+### 11. How do you convert a given String into int like the atoi()?
+
+```js
+function myAtoi(str) {
+  let index = 0;
+  let result = 0;
+  let sign = 1;
+
+  // Constants for integer limits
+  const INT_MAX = 2**31 - 1;
+  const INT_MIN = -2**31;
+
+  // Trim leading whitespaces
+  str = str.trim();
+
+  // Handle empty string after trimming
+  if (str.length === 0) return 0;
+
+  // Check for optional sign
+  if (str[index] === '-') {
+    sign = -1;
+    index++;
+  } else if (str[index] === '+') {
+    index++;
+  }
+
+  // Convert characters to integer
+  while (index < str.length && str[index] >= '0' && str[index] <= '9') {
+    let digit = str[index] - '0'; // Convert character to number
+    if (result > (INT_MAX - digit) / 10) {
+      // Handle overflow
+      return sign === 1 ? INT_MAX : INT_MIN;
+    }
+    result = result * 10 + digit;
+    index++;
+  }
+
+  return result * sign;
+}
+
+// Example usage
+console.log(myAtoi("   -42")); // Output: -42
+console.log(myAtoi("4193 with words")); // Output: 4193
+console.log(myAtoi("words and 987")); // Output: 0
+console.log(myAtoi("2147483648")); // Output: 2147483647 (overflow)
+console.log(myAtoi("-2147483649")); // Output: -2147483648 (underflow)
+
+```
+---
+
+### 12. How do you reverse words in a given sentence without using any library method?
+
+```js
+function reverseWords(sentence) {
+  // Helper function to reverse a substring within the sentence
+  function reverseSubstring(str, left, right) {
+    while (left < right) {
+      [str[left], str[right]] = [str[right], str[left]]; // Swap characters
+      left++;
+      right--;
+    }
+  }
+
+  // Convert the string to an array for easier manipulation
+  let str = sentence.split('');
+  let n = str.length;
+
+  // Reverse the entire sentence
+  reverseSubstring(str, 0, n - 1);
+
+  // Reverse each word in the reversed sentence
+  let start = 0;
+  for (let end = 0; end <= n; end++) {
+    if (end === n || str[end] === ' ') {
+      reverseSubstring(str, start, end - 1);
+      start = end + 1;
+    }
+  }
+
+  // Convert the array back to a string
+  return str.join('');
+}
+
+// Example usage
+console.log(reverseWords("The quick brown fox jumps over the lazy dog"));
+// Output: "dog lazy the over jumps fox brown quick The"
+
+```
 
 
 ---
